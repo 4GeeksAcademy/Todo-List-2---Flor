@@ -1,3 +1,6 @@
-/* 
-    General Styles
-*/
+li:hover>*{
+    visibility:visible;
+}
+.icono-oculto{
+    visibility: hidden;
+}
