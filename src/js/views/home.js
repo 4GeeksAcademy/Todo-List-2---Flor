@@ -99,24 +99,24 @@ const Home = () => {
 			<h1 className="text-center mt-5">TODOS</h1>
 			<form className="row">
 				<div className="col-12">
-					<input type="text" className="from-control border border-primary w-50" placeholder="Nueva Tarea" value={tarea} onChange={(evento)=>
+					<input type="text" className="form-control border border-secondary" placeholder="Nueva Tarea" value={tarea} onChange={(evento)=>
 						setTarea(evento.target.value)} />
 				</div>
 				<div className="col-12 mt-2">
 					<button type="submit" onClick={(evento)=>agregarTareas(evento)}
-					className="btn btn-primary mb-3">Agregar Tarea</button>
+					className="btn btn-secondary mb-3">Agregar Tarea</button>
 				</div>	
 			</form>
 			<ul className="list-group">
-			<ul className="list-group border-primary">
+			<ul className="list-group border-secondary">
 				{lista.map((item, index)=> (
-					<li className="list-group-item border border-primary" key={index}>{item.label}<i onClick={()=>{borrarTareas(item.id)}}
-					className="m-1 fa fa-trash icono-oculto"></i></li>
+					<li className="list-group-item border border-secondary mb-1 text-secondary" key={index}>{item.label}<i onClick={()=>{borrarTareas(item.id)}}
+					className="m-1 fa-solid fa-x icono-oculto float-end text-secondary"></i></li>
 				))}
 			</ul>
 			<span className="text-primary">{(lista.length==0)?"No hay tareas, Agrega una":""}</span>
 				<p></p>
-			<span className="text-success">{lista.length} Items Left</span>
+			<span className="text-success">{lista.length} Tareas faltantes</span>
 			</ul>
 		</div>
 		
